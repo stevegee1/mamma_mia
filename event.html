@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Gallery — Mamma Mia Portfolio</title>
+  <meta name="description" content="Event gallery and media showcase for Mamma Mia. High resolution photography and video clips served directly via Cloudflare R2 CDN.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">Mamma Mia</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Profile</a></li>
+          <li><a href="catalog.html">Disciplines</a></li>
+          <li><a href="category.html?id=red-carpet">Red Carpet</a></li>
+          <li><a href="category.html?id=acting">Acting</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Event Header -->
+    <div class="event-header">
+      <div class="event-breadcrumbs">
+        <a href="catalog.html">Disciplines</a> &sol; <a href="#" id="event-category-link">Category</a>
+      </div>
+      <h1 class="heading-xl font-serif" id="event-title">Event Title</h1>
+      
+      <div style="display: flex; gap: 2rem; font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+        <span id="event-venue">Venue Name</span>
+        <span>&bull;</span>
+        <span id="event-date">Date</span>
+      </div>
+
+      <p id="event-description" style="font-size: 1.1rem; line-height: 1.7; color: var(--text-main); margin-top: 1rem; max-width: 800px;">
+        Event detailed description.
+      </p>
+    </div>
+
+    <!-- Media Gallery Grid (Photos + Video Posters mixed) -->
+    <div class="gallery-grid" id="event-gallery-grid">
+      <!-- Dynamically rendered via app.js -->
+    </div>
+
+  </main>
+
+  <!-- Editorial Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media Lightbox">
+    <button class="lightbox-btn lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-btn lightbox-prev" id="lightbox-prev" aria-label="Previous Media">&#10094;</button>
+    <button class="lightbox-btn lightbox-next" id="lightbox-next" aria-label="Next Media">&#10095;</button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-media-wrapper" id="lightbox-media-wrapper">
+        <!-- Dynamically injected full-res photo or video player -->
+      </div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-logo">Mamma Mia</span>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Akure &bull; London &bull; Worldwide 🌍✈️</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Disciplines</h4>
+          <a href="category.html?id=fashion">Fashion</a>
+          <a href="category.html?id=modeling">Modeling</a>
+          <a href="category.html?id=red-carpet">Red Carpet Hosting</a>
+          <a href="category.html?id=acting">Acting & Voice</a>
+        </div>
+        <div class="footer-col">
+          <h4>Reach Out & Enquiries</h4>
+          <a href="https://wa.me/2348103365489" target="_blank" rel="noopener">WhatsApp: +234 810 336 5489</a>
+          <a href="mailto:ifesolapefadero@gmail.com">Email: ifesolapefadero@gmail.com</a>
+          <a href="https://instagram.com/wba_05_amelia" target="_blank" rel="noopener">Instagram: @wba_05_amelia</a>
+          <a href="https://www.tiktok.com/@mama__mia___" target="_blank" rel="noopener">TikTok: @mama__mia___</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Mamma Mia. All rights reserved.</span>
+      <span>Served via Cloudflare R2</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/config.js"></script>
+  <script src="data/content.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
