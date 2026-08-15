@@ -15,9 +15,17 @@
    */
   function resolveMediaUrl(path) {
     if (!path) return '';
-    const r2Base = (window.ENV && window.ENV.R2_PUBLIC_URL) 
+    let r2Base = (window.ENV && window.ENV.R2_PUBLIC_URL) 
       ? window.ENV.R2_PUBLIC_URL.replace(/\/+$/, '') 
-      : 'https://media.example.com';
+      : 'https://pub-efd8f9001bec49a8b48d693b9f8d59a7.r2.dev';
+
+    if (!r2Base || r2Base.includes('example.com')) {
+      r2Base = 'https://pub-efd8f9001bec49a8b48d693b9f8d59a7.r2.dev';
+    }
+
+    if (path.startsWith('http://') || path.startsWith('https://')) {
+      return path;
+    }
     return path.replace('<R2_URL>', r2Base);
   }
 
@@ -72,9 +80,14 @@
     const profileStatsContainer = document.getElementById('profile-stats');
     const featuredGrid = document.getElementById('featured-events-grid');
 
-    if (heroImageContainer && CONTENT.categories[0] && CONTENT.categories[0].events[0]) {
-      const sampleCover = resolveMediaUrl(CONTENT.categories[0].events[0].thumb);
-      heroImageContainer.innerHTML = `<img src="${sampleCover}" alt="${CONTENT.profile.name}" loading="eager">`;
+    if (heroImageContainer) {
+      const heroPhotoUrl = CONTENT.profile.profileImage
+        ? resolveMediaUrl(CONTENT.profile.profileImage)
+        : (CONTENT.categories[0] && CONTENT.categories[0].events[0] ? resolveMediaUrl(CONTENT.categories[0].events[0].thumb) : '');
+      
+      if (heroPhotoUrl) {
+        heroImageContainer.innerHTML = `<img src="${heroPhotoUrl}" alt="${CONTENT.profile.name}" loading="eager">`;
+      }
     }
 
     if (profileStatsContainer && CONTENT.profile.stats) {

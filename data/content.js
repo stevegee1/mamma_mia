@@ -8,6 +8,7 @@ const CONTENT = {
     name: "Mamma Mia",
     title: "Red Carpet Host • Model • Fashion & Art",
     tagline: "Expect nothing but iconic vibes — Akure, Ondo State to all over the world 🌍✈️",
+    profileImage: "<R2_URL>/mamma_mia_profile.jpg",
     bio: "Mamma Mia is a 6ft tall Red Carpet Host, Model, and Fashion & Art multi-hyphenate. Expect nothing but iconic vibes — originating from Akure, Ondo State and bringing high energy, presence, and elegance to stages, runways, and screens all over the world. 🌍✈️",
     stats: [
       { label: "Height", value: "6'0\" / 183 cm" },

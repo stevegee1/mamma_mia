@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 // Dynamic runtime configuration endpoint for Cloudflare R2 public base URL
 app.get('/config.js', (req, res) => {
   res.type('application/javascript');
-  const r2PublicUrl = (process.env.R2_PUBLIC_URL || 'https://media.example.com').replace(/\/+$/, '');
+  const r2PublicUrl = (process.env.R2_PUBLIC_URL || 'https://pub-efd8f9001bec49a8b48d693b9f8d59a7.r2.dev').replace(/\/+$/, '');
   res.send(`window.ENV = ${JSON.stringify({ R2_PUBLIC_URL: r2PublicUrl })};`);
 });
 
