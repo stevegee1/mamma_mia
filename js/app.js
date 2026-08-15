@@ -301,12 +301,15 @@
         `;
       }).join('');
 
+      const partnersDescText = targetEvent.partnersDescription 
+        || `Collaborate with Mamma Mia for high-visibility brand placements, luxury red carpet features, and broadcast partnerships during ${targetEvent.name}.`;
+
       partnersContainer.innerHTML = `
         <section class="partners-section">
-          <span class="subheading">Sponsorship & Brand Opportunities</span>
+          <span class="subheading">Special Recognition & Appreciation</span>
           <h2 class="heading-lg font-serif" style="margin-top: 0.4rem;">Sponsored Partners</h2>
-          <p style="font-size: 1.05rem; color: var(--text-muted); margin-top: 0.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">
-            Collaborate with Mamma Mia for high-visibility brand placements, luxury red carpet features, and broadcast partnerships.
+          <p style="font-size: 1.05rem; color: var(--text-muted); margin-top: 0.5rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+            ${partnersDescText}
           </p>
 
           <div class="partners-grid">
@@ -314,7 +317,7 @@
           </div>
 
           <div style="margin-top: 2.5rem;">
-            <a href="https://wa.me/2348103365489?text=Hello%20Mamma%20Mia,%20I'd%20like%20to%20inquire%20about%20Sponsored%20Partnerships%20for%20FrammaHomes%20Show" target="_blank" rel="noopener" class="dangling-btn" style="padding: 0.75rem 1.8rem; font-size: 0.85rem;">
+            <a href="https://wa.me/2348103365489?text=Hello%20Mamma%20Mia,%20I'd%20like%20to%20inquire%20about%20Sponsored%20Partnerships%20for%20${encodeURIComponent(targetEvent.name)}" target="_blank" rel="noopener" class="dangling-btn" style="padding: 0.75rem 1.8rem; font-size: 0.85rem;">
               Become a Partner & Inquire &rarr;
             </a>
           </div>

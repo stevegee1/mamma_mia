@@ -155,6 +155,7 @@ const CONTENT = {
               caption: "FrammaHomes Behind The Scenes Feature"
             }
           ],
+          partnersDescription: "This is a special recognition and heartfelt appreciation to my esteemed brand partners, sponsors, and collaborators for making the FrammaHomes Reality Show a reality. Together, we bring iconic vibes, luxury architectural art, and global entertainment to the world. 🌍✈️",
           partners: [
             { id: 1, name: "Headline Sponsor", logo: "", status: "Slot Open" },
             { id: 2, name: "Luxury Brand Partner", logo: "", status: "Slot Open" },
