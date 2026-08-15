@@ -398,6 +398,23 @@ h1, h2, h3, .font-serif {
   margin-top: 3rem;
 }
 
+.section-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.section-header-link {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  border-bottom: 1px solid var(--text-main);
+  white-space: nowrap;
+}
+
 .event-card {
   display: flex;
   flex-direction: column;
@@ -1188,7 +1205,7 @@ h1, h2, h3, .font-serif {
   }
 }
 
-/* Extra Small Viewports (< 480px) */
+/* Extra Small Viewports (< 480px / iPhone 11 Pro) */
 @media (max-width: 480px) {
   .brand-logo {
     font-size: 1.4rem;
@@ -1200,11 +1217,37 @@ h1, h2, h3, .font-serif {
   }
 
   .heading-xl {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   .heading-lg {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  .section-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header-link {
+    font-size: 0.75rem;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .event-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .event-card-content {
+    padding: 1.15rem 0.9rem;
   }
 
   .gallery-grid {
