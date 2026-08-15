@@ -39,8 +39,58 @@ const CONTENT = {
       label: "Fashion",
       tagline: "Haute Couture & Runway",
       description: "Couture collection presentations, luxury atelier showcases, and avant-garde editorial styling across London, Paris, and Mumbai.",
-      coverImage: "<R2_URL>/events/paris-fashion-week-ss26/thumb.webp",
+      coverImage: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_6FA7F570-DF90-4616-857A-74E19F78B5A2.webp",
       events: [
+        {
+          id: "deron-stitches-fashion-brand",
+          name: "Deron Stitches Couture Collection",
+          date: "2026",
+          venue: "Lagos & International Fashion Showcase",
+          description: "Bespoke fashion brand exhibition, high-couture tailoring, and editorial runway showcase for Deron Stitches.",
+          thumb: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_6FA7F570-DF90-4616-857A-74E19F78B5A2.webp",
+          media: [
+            {
+              type: "photo",
+              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_6FA7F570-DF90-4616-857A-74E19F78B5A2.webp",
+              caption: "Deron Stitches Tailored Couture Look 01"
+            },
+            {
+              type: "photo",
+              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_78173A42-E2A8-4072-B10E-FA52F7566846.webp",
+              caption: "Deron Stitches Editorial Fashion Look 02"
+            },
+            {
+              type: "photo",
+              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_850A1608-536D-4038-9F39-AEE6FCCC1553.webp",
+              caption: "Bespoke Silhouette & Pattern Showcase 03"
+            },
+            {
+              type: "photo",
+              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_8765528D-4C57-455E-AB90-DF695C57FFAD.webp",
+              caption: "Haute Couture Atelier Detail 04"
+            },
+            {
+              type: "photo",
+              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_9ACC40B7-B10A-4483-A33C-B30B2CBE9CD0.webp",
+              caption: "High-Fashion Editorial Portrait 05"
+            },
+            {
+              type: "photo",
+              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_EC6D51E8-B4FD-4F6A-971E-2A34FD49A3C6.webp",
+              caption: "Deron Stitches Statement Ensemble 06"
+            },
+            {
+              type: "photo",
+              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_EF2D9DF6-4224-486A-9BA5-B3B6337652F4.webp",
+              caption: "Runway Presentation & Look 07"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/v29044g50000d72e91nog65hq65hppbg.mp4",
+              caption: "Deron Stitches Runway Motion & Campaign Reel"
+            }
+          ]
+        },
         {
           id: "paris-fashion-week-ss26",
           name: "Paris Fashion Week SS26",
@@ -87,8 +137,48 @@ const CONTENT = {
       label: "Modeling",
       tagline: "Campaigns & Covers",
       description: "Global commercial campaigns, luxury beauty editorials, and international magazine cover shoots.",
-      coverImage: "<R2_URL>/events/harpers-bazaar-cover/thumb.webp",
+      coverImage: "<R2_URL>/Facial%20modeling/2fee44d48b1d4de59d42422ff4ccc5c6.mp4",
       events: [
+        {
+          id: "facial-modeling-showcase",
+          name: "Facial Modeling Showcase",
+          date: "2026",
+          venue: "Beauty & Editorial Commercials",
+          description: "High-definition beauty portraiture, facial expression dexterity, and commercial cosmetics video portfolio.",
+          thumb: "<R2_URL>/Facial%20modeling/2fee44d48b1d4de59d42422ff4ccc5c6.mp4",
+          media: [
+            {
+              type: "video",
+              src: "<R2_URL>/Facial%20modeling/2fee44d48b1d4de59d42422ff4ccc5c6.mp4",
+              caption: "Facial Modeling Expression Reel 01"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Facial%20modeling/adc77281f7fc441194810cb4e8492665.mp4",
+              caption: "Beauty & Cosmetics Focus Reel 02"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Facial%20modeling/v14044g50000d6hte2nog65tg5deptc0.mp4",
+              caption: "Facial Structure & Lighting Test 03"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Facial%20modeling/v14044g50000d733dmnog65hqr9cuub0.mp4",
+              caption: "Editorial Beauty Feature 04"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Facial%20modeling/v14044g50000d8l4r3vog65kkubbibbg.mp4",
+              caption: "Commercial Skincare & Close-up Reel 05"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Facial%20modeling/v1c044g50000d8h85bnog65p1orfe780.mp4",
+              caption: "High-Fashion Beauty Campaign 06"
+            }
+          ]
+        },
         {
           id: "harpers-bazaar-cover",
           name: "Harper's Bazaar Cover Shoot",
@@ -123,6 +213,21 @@ const CONTENT = {
       description: "Broadcasting and interviewing Hollywood and South Asian cinema icons live at premiere galas and film festivals.",
       coverImage: "<R2_URL>/events/met-gala-2026/thumb.webp",
       events: [
+        {
+          id: "mr-arthur-birthday-red-carpet",
+          name: "Mr. Arthur's Birthday Red Carpet",
+          date: "2026",
+          venue: "Private Gala & Red Carpet",
+          description: "Exclusive red carpet hosting, VIP interviews, and high-energy live coverage for Mr. Arthur's Birthday Gala.",
+          thumb: "<R2_URL>/redcarpet/mr_authur_birthday/a2106354eb37400ea111556827af333f.mp4",
+          media: [
+            {
+              type: "video",
+              src: "<R2_URL>/redcarpet/mr_authur_birthday/a2106354eb37400ea111556827af333f.mp4",
+              caption: "Mr. Arthur's Birthday Red Carpet Hosting Highlights"
+            }
+          ]
+        },
         {
           id: "frammahomes-show-2026",
           name: "FrammaHomes Reality Show",

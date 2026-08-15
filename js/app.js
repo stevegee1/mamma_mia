@@ -23,10 +23,29 @@
       r2Base = 'https://pub-efd8f9001bec49a8b48d693b9f8d59a7.r2.dev';
     }
 
-    if (path.startsWith('http://') || path.startsWith('https://')) {
-      return path;
+    let resolved = path.startsWith('http://') || path.startsWith('https://') 
+      ? path 
+      : path.replace('<R2_URL>', r2Base);
+
+    try {
+      resolved = encodeURI(decodeURI(resolved));
+    } catch (e) {}
+
+    return resolved;
+  }
+
+  function isVideoUrl(url) {
+    if (!url) return false;
+    const lower = url.toLowerCase();
+    return lower.endsWith('.mp4') || lower.endsWith('.mov') || lower.endsWith('.webm') || lower.endsWith('.m4v');
+  }
+
+  function renderThumbHTML(thumbPath, altText = '') {
+    const fullUrl = resolveMediaUrl(thumbPath);
+    if (isVideoUrl(fullUrl)) {
+      return `<video src="${fullUrl}#t=0.5" preload="metadata" muted playsinline style="width:100%; height:100%; object-fit:cover; pointer-events:none;"></video>`;
     }
-    return path.replace('<R2_URL>', r2Base);
+    return `<img src="${fullUrl}" alt="${altText}" loading="lazy">`;
   }
 
   /**
@@ -43,13 +62,13 @@
   document.addEventListener('DOMContentLoaded', () => {
     highlightActiveNav();
 
-    const path = window.location.pathname;
+    const pathname = window.location.pathname;
     
-    if (path.endsWith('catalog.html')) {
+    if (pathname.includes('catalog.html')) {
       renderCatalogPage();
-    } else if (path.endsWith('category.html')) {
+    } else if (pathname.includes('category.html')) {
       renderCategoryPage();
-    } else if (path.endsWith('event.html')) {
+    } else if (pathname.includes('event.html')) {
       renderEventPage();
     } else {
       renderHomePage();
@@ -111,7 +130,7 @@
       featuredGrid.innerHTML = featuredEvents.map(event => `
         <a href="event.html?id=${event.id}" class="event-card">
           <div class="event-card-thumb">
-            <img src="${resolveMediaUrl(event.thumb)}" alt="${event.name}" loading="lazy">
+            ${renderThumbHTML(event.thumb, event.name)}
           </div>
           <div class="event-card-content">
             <div class="event-meta">
@@ -134,19 +153,18 @@
     if (!catalogContainer) return;
 
     catalogContainer.innerHTML = CONTENT.categories.map(category => {
-      const coverUrl = resolveMediaUrl(category.coverImage || (category.events[0] && category.events[0].thumb));
+      const coverUrl = category.coverImage || (category.events[0] && category.events[0].thumb);
       const eventCount = category.events ? category.events.length : 0;
 
       return `
         <a href="category.html?id=${category.id}" class="catalog-card">
           <div class="catalog-card-image">
-            <img src="${coverUrl}" alt="${category.label}" loading="lazy">
+            ${renderThumbHTML(coverUrl, category.label)}
           </div>
-          <div class="catalog-card-body">
-            <span class="subheading">${category.tagline}</span>
-            <h2 class="heading-lg">${category.label}</h2>
-            <p>${category.description}</p>
-            <div class="event-count">${eventCount} ${eventCount === 1 ? 'Feature' : 'Features / Events'}</div>
+          <div class="catalog-card-overlay">
+            <span class="catalog-card-count">${eventCount} Featured ${eventCount === 1 ? 'Event' : 'Events'}</span>
+            <h3 class="catalog-card-title">${category.label}</h3>
+            <p class="catalog-card-tagline">${category.tagline}</p>
           </div>
         </a>
       `;
@@ -161,10 +179,12 @@
     const category = CONTENT.categories.find(c => c.id === categoryId) || CONTENT.categories[0];
 
     const titleEl = document.getElementById('category-title');
+    const taglineEl = document.getElementById('category-tagline');
     const descEl = document.getElementById('category-description');
     const eventsGrid = document.getElementById('category-events-grid');
 
     if (titleEl) titleEl.textContent = category.label;
+    if (taglineEl) taglineEl.textContent = category.tagline;
     if (descEl) descEl.textContent = category.description;
 
     if (eventsGrid && category.events) {
@@ -175,12 +195,12 @@
         return `
           <a href="event.html?id=${event.id}" class="event-card">
             <div class="event-card-thumb">
-              <img src="${resolveMediaUrl(event.thumb)}" alt="${event.name}" loading="lazy">
+              ${renderThumbHTML(event.thumb, event.name)}
             </div>
             <div class="event-card-content">
               <div class="event-meta">
                 <span>${event.date}</span>
-                <span>${photoCount} Photos ${videoCount ? '• ' + videoCount + ' Videos' : ''}</span>
+                <span>${photoCount ? photoCount + ' Photos ' : ''}${videoCount ? (photoCount ? '• ' : '') + videoCount + ' Videos' : ''}</span>
               </div>
               <h3 class="font-serif heading-md">${event.name}</h3>
               <p style="font-size: 0.85rem; color: var(--text-muted);">${event.venue}</p>
@@ -245,13 +265,13 @@
         if (isVideo) {
           // If custom poster is specified and not the shared cover photo
           if (media.poster && !media.poster.includes('1727a7ac-b00f-475b-b2a3-803658ea8ddc')) {
-            previewHTML = `<img src="${resolveMediaUrl(media.poster)}" alt="${media.caption || targetEvent.name}" loading="lazy">`;
+            previewHTML = `<img src="${resolveMediaUrl(media.poster)}" alt="${media.caption || targetEvent.name}" loading="eager">`;
           } else {
             // Render native video metadata frame (#t=0.5) so each video displays its own frame preview
             previewHTML = `<video src="${mediaUrl}#t=0.5" preload="metadata" muted playsinline style="width:100%; height:100%; object-fit:cover; pointer-events:none;"></video>`;
           }
         } else {
-          previewHTML = `<img src="${mediaUrl}" alt="${media.caption || targetEvent.name}" loading="lazy">`;
+          previewHTML = `<img src="${mediaUrl}" alt="${media.caption || targetEvent.name}" loading="eager">`;
         }
 
         return `
