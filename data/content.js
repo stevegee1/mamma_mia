@@ -154,6 +154,12 @@ const CONTENT = {
               poster: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
               caption: "FrammaHomes Behind The Scenes Feature"
             }
+          ],
+          partners: [
+            { id: 1, name: "Headline Sponsor", logo: "", status: "Slot Open" },
+            { id: 2, name: "Luxury Brand Partner", logo: "", status: "Slot Open" },
+            { id: 3, name: "Media & Broadcast Partner", logo: "", status: "Slot Open" },
+            { id: 4, name: "Official Fashion Partner", logo: "", status: "Slot Open" }
           ]
         },
         {

@@ -271,6 +271,58 @@
         });
       });
     }
+
+    // Render Sponsored Partners Section (Golden Circles)
+    const partnersContainer = document.getElementById('event-partners-container');
+    if (partnersContainer && (targetEvent.partners || targetEvent.id === 'frammahomes-show-2026')) {
+      const partnersList = targetEvent.partners || [
+        { id: 1, name: "Headline Sponsor", logo: "", status: "Slot Open" },
+        { id: 2, name: "Luxury Brand Partner", logo: "", status: "Slot Open" },
+        { id: 3, name: "Media & Broadcast Partner", logo: "", status: "Slot Open" },
+        { id: 4, name: "Official Fashion Partner", logo: "", status: "Slot Open" }
+      ];
+
+      const partnersHTML = partnersList.map(partner => {
+        const circleInner = partner.logo 
+          ? `<img src="${resolveMediaUrl(partner.logo)}" alt="${partner.name}">` 
+          : `<span class="golden-circle-icon">?</span>`;
+
+        const waMessage = encodeURIComponent(`Hello Mamma Mia, I am interested in becoming a ${partner.name} for ${targetEvent.name}.`);
+        const waLink = `https://wa.me/2348103365489?text=${waMessage}`;
+
+        return `
+          <a href="${waLink}" target="_blank" rel="noopener" class="partner-card" title="Click to inquire about sponsorship for ${partner.name}">
+            <div class="golden-circle">
+              ${circleInner}
+            </div>
+            <span class="partner-name">${partner.name}</span>
+            <span class="partner-status">${partner.status || 'Slot Open'}</span>
+          </a>
+        `;
+      }).join('');
+
+      partnersContainer.innerHTML = `
+        <section class="partners-section">
+          <span class="subheading">Sponsorship & Brand Opportunities</span>
+          <h2 class="heading-lg font-serif" style="margin-top: 0.4rem;">Sponsored Partners</h2>
+          <p style="font-size: 1.05rem; color: var(--text-muted); margin-top: 0.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">
+            Collaborate with Mamma Mia for high-visibility brand placements, luxury red carpet features, and broadcast partnerships.
+          </p>
+
+          <div class="partners-grid">
+            ${partnersHTML}
+          </div>
+
+          <div style="margin-top: 2.5rem;">
+            <a href="https://wa.me/2348103365489?text=Hello%20Mamma%20Mia,%20I'd%20like%20to%20inquire%20about%20Sponsored%20Partnerships%20for%20FrammaHomes%20Show" target="_blank" rel="noopener" class="dangling-btn" style="padding: 0.75rem 1.8rem; font-size: 0.85rem;">
+              Become a Partner & Inquire &rarr;
+            </a>
+          </div>
+        </section>
+      `;
+    } else if (partnersContainer) {
+      partnersContainer.innerHTML = '';
+    }
   }
 
   /**
