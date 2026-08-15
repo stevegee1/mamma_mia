@@ -15,6 +15,9 @@
    */
   function resolveMediaUrl(path) {
     if (!path) return '';
+    if (path.startsWith('/images/') || path.startsWith('images/')) {
+      return path;
+    }
     let r2Base = (window.ENV && window.ENV.R2_PUBLIC_URL) 
       ? window.ENV.R2_PUBLIC_URL.replace(/\/+$/, '') 
       : 'https://pub-efd8f9001bec49a8b48d693b9f8d59a7.r2.dev';

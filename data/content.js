@@ -39,7 +39,7 @@ const CONTENT = {
       label: "Fashion",
       tagline: "Haute Couture & Runway",
       description: "Couture collection presentations, luxury atelier showcases, and avant-garde editorial styling across London, Paris, and Mumbai.",
-      coverImage: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_6FA7F570-DF90-4616-857A-74E19F78B5A2.webp",
+      coverImage: "/images/deron-stitches/look_1.jpg",
       events: [
         {
           id: "deron-stitches-fashion-brand",
@@ -47,41 +47,41 @@ const CONTENT = {
           date: "2026",
           venue: "Lagos & International Fashion Showcase",
           description: "Bespoke fashion brand exhibition, high-couture tailoring, and editorial runway showcase for Deron Stitches.",
-          thumb: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_6FA7F570-DF90-4616-857A-74E19F78B5A2.webp",
+          thumb: "/images/deron-stitches/look_1.jpg",
           media: [
             {
               type: "photo",
-              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_6FA7F570-DF90-4616-857A-74E19F78B5A2.webp",
+              src: "/images/deron-stitches/look_1.jpg",
               caption: "Deron Stitches Tailored Couture Look 01"
             },
             {
               type: "photo",
-              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_78173A42-E2A8-4072-B10E-FA52F7566846.webp",
+              src: "/images/deron-stitches/look_2.jpg",
               caption: "Deron Stitches Editorial Fashion Look 02"
             },
             {
               type: "photo",
-              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_850A1608-536D-4038-9F39-AEE6FCCC1553.webp",
+              src: "/images/deron-stitches/look_3.jpg",
               caption: "Bespoke Silhouette & Pattern Showcase 03"
             },
             {
               type: "photo",
-              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_8765528D-4C57-455E-AB90-DF695C57FFAD.webp",
+              src: "/images/deron-stitches/look_4.jpg",
               caption: "Haute Couture Atelier Detail 04"
             },
             {
               type: "photo",
-              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_9ACC40B7-B10A-4483-A33C-B30B2CBE9CD0.webp",
+              src: "/images/deron-stitches/look_5.jpg",
               caption: "High-Fashion Editorial Portrait 05"
             },
             {
               type: "photo",
-              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_EC6D51E8-B4FD-4F6A-971E-2A34FD49A3C6.webp",
+              src: "/images/deron-stitches/look_6.jpg",
               caption: "Deron Stitches Statement Ensemble 06"
             },
             {
               type: "photo",
-              src: "<R2_URL>/Fashion%20brand/Deron-Stitches/temp_image_EF2D9DF6-4224-486A-9BA5-B3B6337652F4.webp",
+              src: "/images/deron-stitches/look_7.jpg",
               caption: "Runway Presentation & Look 07"
             },
             {
