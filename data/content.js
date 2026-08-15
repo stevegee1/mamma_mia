@@ -125,14 +125,35 @@ const CONTENT = {
       events: [
         {
           id: "frammahomes-show-2026",
-          name: "FrammaHomes Show",
+          name: "FrammaHomes Reality Show",
           date: "Coming Soon 2026",
           venue: "Akure, Ondo State & Global Broadcast 🌍✈️",
-          description: "Exclusive red carpet host presentation, luxury architectural art exhibition, and live showcase.",
-          thumb: "<R2_URL>/events/frammahomes-show-2026/thumb.webp",
+          description: "Exclusive red carpet host presentation, luxury architectural art exhibition, and live reality show showcase.",
+          thumb: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
           media: [
-            { type: "photo", src: "<R2_URL>/events/frammahomes-show-2026/photos/1.webp", caption: "FrammaHomes Show Preview Teaser" },
-            { type: "video", src: "<R2_URL>/events/frammahomes-show-2026/videos/teaser.mp4", poster: "<R2_URL>/events/frammahomes-show-2026/poster.webp", caption: "FrammaHomes Show Official Announcement Reel" }
+            {
+              type: "photo",
+              src: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
+              caption: "FrammaHomes Reality Show Official Promo Stills"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Framma_home%20reality%20show%20/442da742093b4fe78b3d8f26e60ddf71.mp4",
+              poster: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
+              caption: "FrammaHomes Reality Show Teaser 01"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Framma_home%20reality%20show%20/d54622dd-f872-47be-95ce-7e4672b26d52.mp4",
+              poster: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
+              caption: "FrammaHomes Reality Show Official Trailer Reel"
+            },
+            {
+              type: "video",
+              src: "<R2_URL>/Framma_home%20reality%20show%20/7db01beb856441c69917e9fb09e6459a.mov",
+              poster: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
+              caption: "FrammaHomes Behind The Scenes Feature"
+            }
           ]
         },
         {

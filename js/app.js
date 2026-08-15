@@ -239,11 +239,24 @@
     if (galleryGrid) {
       galleryGrid.innerHTML = currentGalleryMedia.map((media, index) => {
         const isVideo = media.type === 'video';
-        const thumbSrc = resolveMediaUrl(isVideo ? (media.poster || targetEvent.thumb) : media.src);
+        const mediaUrl = resolveMediaUrl(media.src);
+
+        let previewHTML = '';
+        if (isVideo) {
+          // If custom poster is specified and not the shared cover photo
+          if (media.poster && !media.poster.includes('1727a7ac-b00f-475b-b2a3-803658ea8ddc')) {
+            previewHTML = `<img src="${resolveMediaUrl(media.poster)}" alt="${media.caption || targetEvent.name}" loading="lazy">`;
+          } else {
+            // Render native video metadata frame (#t=0.5) so each video displays its own frame preview
+            previewHTML = `<video src="${mediaUrl}#t=0.5" preload="metadata" muted playsinline style="width:100%; height:100%; object-fit:cover; pointer-events:none;"></video>`;
+          }
+        } else {
+          previewHTML = `<img src="${mediaUrl}" alt="${media.caption || targetEvent.name}" loading="lazy">`;
+        }
 
         return `
           <div class="gallery-item" data-index="${index}">
-            <img src="${thumbSrc}" alt="${media.caption || targetEvent.name}" loading="lazy">
+            ${previewHTML}
             <div class="media-badge">${isVideo ? '▶ Video' : 'Photo'}</div>
           </div>
         `;
