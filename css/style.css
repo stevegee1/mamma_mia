@@ -822,6 +822,18 @@ h1, h2, h3, .font-serif {
   border-radius: 50%;
 }
 
+.golden-circle.has-logo {
+  background: #FFFFFF;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+}
+
+.golden-circle.has-logo img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
 .partner-name {
   font-size: 0.82rem;
   font-weight: 700;
@@ -840,6 +852,13 @@ h1, h2, h3, .font-serif {
   padding: 0.2rem 0.65rem;
   border: 1px dashed var(--accent-gold);
   border-radius: 20px;
+}
+
+.partner-status.active-status {
+  background: var(--accent-gold);
+  color: #1A0307;
+  border: 1px solid var(--accent-red);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
 /* ==========================================================================

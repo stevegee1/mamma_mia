@@ -311,15 +311,16 @@
           : `<span class="golden-circle-icon">?</span>`;
 
         const waMessage = encodeURIComponent(`Hello Mamma Mia, I am interested in becoming a ${partner.name} for ${targetEvent.name}.`);
-        const waLink = `https://wa.me/2348103365489?text=${waMessage}`;
+        const defaultWaLink = `https://wa.me/2348103365489?text=${waMessage}`;
+        const targetLink = partner.link || defaultWaLink;
 
         return `
-          <a href="${waLink}" target="_blank" rel="noopener" class="partner-card" title="Click to inquire about sponsorship for ${partner.name}">
-            <div class="golden-circle">
+          <a href="${targetLink}" target="_blank" rel="noopener" class="partner-card ${partner.logo ? 'confirmed-partner' : ''}" title="${partner.logo ? 'Click to visit ' + partner.name + ' on WhatsApp' : 'Click to inquire about sponsorship for ' + partner.name}">
+            <div class="golden-circle ${partner.logo ? 'has-logo' : ''}">
               ${circleInner}
             </div>
             <span class="partner-name">${partner.name}</span>
-            <span class="partner-status">${partner.status || 'Slot Open'}</span>
+            <span class="partner-status ${partner.logo ? 'active-status' : ''}">${partner.status || 'Slot Open'}</span>
           </a>
         `;
       }).join('');
