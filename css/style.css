@@ -835,11 +835,17 @@ h1, h2, h3, .font-serif {
 }
 
 .partner-name {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--accent-gold-light);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--accent-red-dark);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.partner-card:hover .partner-name {
+  color: var(--accent-red);
 }
 
 .partner-status {
@@ -848,17 +854,18 @@ h1, h2, h3, .font-serif {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  background: rgba(200, 16, 46, 0.15);
-  padding: 0.2rem 0.65rem;
-  border: 1px dashed var(--accent-gold);
+  background: rgba(200, 16, 46, 0.12);
+  padding: 0.25rem 0.75rem;
+  border: 1px dashed var(--accent-gold-dark);
   border-radius: 20px;
 }
 
 .partner-status.active-status {
-  background: var(--accent-gold);
-  color: #1A0307;
-  border: 1px solid var(--accent-red);
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  background: var(--accent-red);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 800;
 }
 
 /* ==========================================================================
