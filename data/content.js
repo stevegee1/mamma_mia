@@ -270,9 +270,23 @@ const CONTENT = {
               phone: "08133836622",
               status: "Official Beauty Partner"
             },
-            { id: 2, name: "Headline Sponsor", logo: "", status: "Slot Open" },
-            { id: 3, name: "Luxury Brand Partner", logo: "", status: "Slot Open" },
-            { id: 4, name: "Media & Broadcast Partner", logo: "", status: "Slot Open" }
+            {
+              id: 2,
+              name: "Danita's Nightwears & Lingerie",
+              logo: "/images/partners/danita_nightwear.png",
+              link: "https://wa.me/2348116058225",
+              phone: "08116058225",
+              status: "Official Lingerie Partner"
+            },
+            {
+              id: 3,
+              name: "Funkyhairline",
+              logo: "/images/partners/funkyhairline.png",
+              link: "https://wa.me/2349131519811",
+              phone: "09131519811",
+              status: "Official Hair Partner"
+            },
+            { id: 4, name: "Headline Sponsor", logo: "", status: "Slot Open" }
           ]
         },
         {
