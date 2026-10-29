@@ -297,13 +297,8 @@
 
     // Render Sponsored Partners Section (Golden Circles)
     const partnersContainer = document.getElementById('event-partners-container');
-    if (partnersContainer && (targetEvent.partners || targetEvent.id === 'frammahomes-show-2026')) {
-      const partnersList = targetEvent.partners || [
-        { id: 1, name: "Headline Sponsor", logo: "", status: "Slot Open" },
-        { id: 2, name: "Luxury Brand Partner", logo: "", status: "Slot Open" },
-        { id: 3, name: "Media & Broadcast Partner", logo: "", status: "Slot Open" },
-        { id: 4, name: "Official Fashion Partner", logo: "", status: "Slot Open" }
-      ];
+    if (partnersContainer && targetEvent.partners) {
+      const partnersList = targetEvent.partners;
 
       const partnersHTML = partnersList.map(partner => {
         const circleInner = partner.logo 

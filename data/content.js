@@ -229,67 +229,6 @@ const CONTENT = {
           ]
         },
         {
-          id: "frammahomes-show-2026",
-          name: "FrammaHomes Reality Show",
-          date: "Coming Soon 2026",
-          venue: "Akure, Ondo State & Global Broadcast 🌍✈️",
-          description: "Exclusive red carpet host presentation, luxury architectural art exhibition, and live reality show showcase.",
-          thumb: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
-          media: [
-            {
-              type: "photo",
-              src: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
-              caption: "FrammaHomes Reality Show Official Promo Stills"
-            },
-            {
-              type: "video",
-              src: "<R2_URL>/Framma_home%20reality%20show%20/442da742093b4fe78b3d8f26e60ddf71.mp4",
-              poster: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
-              caption: "FrammaHomes Reality Show Teaser 01"
-            },
-            {
-              type: "video",
-              src: "<R2_URL>/Framma_home%20reality%20show%20/d54622dd-f872-47be-95ce-7e4672b26d52.mp4",
-              poster: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
-              caption: "FrammaHomes Reality Show Official Trailer Reel"
-            },
-            {
-              type: "video",
-              src: "<R2_URL>/Framma_home%20reality%20show%20/7db01beb856441c69917e9fb09e6459a.mov",
-              poster: "<R2_URL>/Framma_home%20reality%20show%20/1727a7ac-b00f-475b-b2a3-803658ea8ddc.jpg",
-              caption: "FrammaHomes Behind The Scenes Feature"
-            }
-          ],
-          partnersDescription: "This is a special recognition and heartfelt appreciation to my esteemed brand partners, sponsors, and collaborators for making the FrammaHomes Reality Show a reality. Together, we bring iconic vibes, luxury architectural art, and global entertainment to the world. 🌍✈️",
-          partners: [
-            {
-              id: 1,
-              name: "Supreme Beauty Empire Spa & Salon",
-              logo: "/images/partners/supreme_beauty_empire.png",
-              link: "https://wa.me/2348133836622",
-              phone: "08133836622",
-              status: "Official Beauty Partner"
-            },
-            {
-              id: 2,
-              name: "Danita's Nightwears & Lingerie",
-              logo: "/images/partners/danita_nightwear.png",
-              link: "https://wa.me/2348116058225",
-              phone: "08116058225",
-              status: "Official Lingerie Partner"
-            },
-            {
-              id: 3,
-              name: "Funkyhairline",
-              logo: "/images/partners/funkyhairline.png",
-              link: "https://wa.me/2349131519811",
-              phone: "09131519811",
-              status: "Official Hair Partner"
-            },
-            { id: 4, name: "Headline Sponsor", logo: "", status: "Slot Open" }
-          ]
-        },
-        {
           id: "met-gala-2026",
           name: "Met Gala 2026 Live Red Carpet",
           date: "2026-05-04",
