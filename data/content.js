@@ -42,6 +42,38 @@ const CONTENT = {
       coverImage: "/images/deron-stitches/look_1.jpg",
       events: [
         {
+          id: "football-transfers-style",
+          name: "Football Transfers Style Feature",
+          date: "2026",
+          venue: "United Kingdom",
+          description: "Fashion styling feature for Football Transfers.",
+          thumb: "/images/fashion/football-transfers-style-poster.jpg",
+          media: [
+            {
+              type: "video",
+              src: "/images/fashion/football-transfers-style.mp4",
+              poster: "/images/fashion/football-transfers-style-poster.jpg",
+              caption: "Football Transfers Style Feature"
+            }
+          ]
+        },
+        {
+          id: "fashion-shoot-bts",
+          name: "Fashion Shoot Behind the Scenes",
+          date: "2026",
+          venue: "Photo Studio",
+          description: "Behind the scenes on set at a fashion photoshoot.",
+          thumb: "/images/fashion/fashion-shoot-bts-poster.jpg",
+          media: [
+            {
+              type: "video",
+              src: "/images/fashion/fashion-shoot-bts.mp4",
+              poster: "/images/fashion/fashion-shoot-bts-poster.jpg",
+              caption: "Fashion Shoot Behind the Scenes"
+            }
+          ]
+        },
+        {
           id: "deron-stitches-fashion-brand",
           name: "Deron Stitches Couture Collection",
           date: "2026",
@@ -241,12 +273,38 @@ const CONTENT = {
               src: "/images/red-carpet/football-transfer-uk.mp4",
               poster: "/images/red-carpet/football-transfer-uk-poster.jpg",
               caption: "Football Transfer, UK Red Carpet Highlights"
-            },
+            }
+          ]
+        },
+        {
+          id: "meet-the-exhibiting-artists",
+          name: "Meet the Exhibiting Artists",
+          date: "2026",
+          venue: "Art Exhibition",
+          description: "Red carpet hosting and artist introductions at the Meet the Exhibiting Artists art exhibition.",
+          thumb: "/images/red-carpet/meet-the-exhibiting-artists-poster.jpg",
+          media: [
             {
               type: "video",
-              src: "/images/red-carpet/football-transfer-uk-2.mp4",
-              poster: "/images/red-carpet/football-transfer-uk-2-poster.jpg",
-              caption: "Football Transfers, UK Feature"
+              src: "/images/red-carpet/meet-the-exhibiting-artists.mp4",
+              poster: "/images/red-carpet/meet-the-exhibiting-artists-poster.jpg",
+              caption: "Meet the Exhibiting Artists Hosting Highlights"
+            }
+          ]
+        },
+        {
+          id: "creatives-event-hosting",
+          name: "Creatives Showcase Hosting",
+          date: "2026",
+          venue: "Outdoor Stage",
+          description: "Live stage hosting at an outdoor fashion and business showcase for creatives.",
+          thumb: "/images/red-carpet/creatives-event-hosting-poster.jpg",
+          media: [
+            {
+              type: "video",
+              src: "/images/red-carpet/creatives-event-hosting.mp4",
+              poster: "/images/red-carpet/creatives-event-hosting-poster.jpg",
+              caption: "Creatives Showcase Hosting Highlights"
             }
           ]
         },
@@ -285,6 +343,47 @@ const CONTENT = {
           media: [
             { type: "photo", src: "<R2_URL>/events/bafta-awards-2025/photos/1.webp", caption: "BAFTA Red Carpet Black Tie Presentation" },
             { type: "video", src: "<R2_URL>/events/bafta-awards-2025/videos/highlights.mp4", poster: "<R2_URL>/events/bafta-awards-2025/poster.webp", caption: "Nominee Red Carpet Highlights" }
+          ]
+        }
+      ]
+    },
+    {
+      id: "advert",
+      label: "Advert",
+      tagline: "Brand Campaigns & Promotions",
+      description: "Brand adverts, promotional features, and event campaigns from Akure and beyond.",
+      coverImage: "/images/advert/crunchies-advert-akure-poster.jpg",
+      events: [
+        {
+          id: "crunchies-advert-akure",
+          name: "Crunchies Advert, Akure",
+          date: "2026",
+          venue: "Crunchies, Akure",
+          description: "Brand advert and promotional feature for Crunchies in Akure.",
+          thumb: "/images/advert/crunchies-advert-akure-poster.jpg",
+          media: [
+            {
+              type: "video",
+              src: "/images/advert/crunchies-advert-akure.mp4",
+              poster: "/images/advert/crunchies-advert-akure-poster.jpg",
+              caption: "Crunchies Advert, Akure"
+            }
+          ]
+        },
+        {
+          id: "akure-city-marathon",
+          name: "Akure City Marathon",
+          date: "2026",
+          venue: "Akure, Ondo State",
+          description: "Stage hosting and promotional coverage for the Akure City Marathon.",
+          thumb: "/images/advert/akure-city-marathon-poster.jpg",
+          media: [
+            {
+              type: "video",
+              src: "/images/advert/akure-city-marathon.mp4",
+              poster: "/images/advert/akure-city-marathon-poster.jpg",
+              caption: "Akure City Marathon Highlights"
+            }
           ]
         }
       ]
