@@ -293,18 +293,18 @@ const CONTENT = {
           ]
         },
         {
-          id: "creatives-event-hosting",
-          name: "Creatives Showcase Hosting",
+          id: "glee-fashion-red-carpet",
+          name: "Glee Fashion Red Carpet",
           date: "2026",
-          venue: "Outdoor Stage",
-          description: "Live stage hosting at an outdoor fashion and business showcase for creatives.",
-          thumb: "/images/red-carpet/creatives-event-hosting-poster.jpg",
+          venue: "Glee Fashion",
+          description: "Red carpet and live stage hosting at the Glee Fashion event.",
+          thumb: "/images/red-carpet/glee-fashion-red-carpet-poster.jpg",
           media: [
             {
               type: "video",
-              src: "/images/red-carpet/creatives-event-hosting.mp4",
-              poster: "/images/red-carpet/creatives-event-hosting-poster.jpg",
-              caption: "Creatives Showcase Hosting Highlights"
+              src: "/images/red-carpet/glee-fashion-red-carpet.mp4",
+              poster: "/images/red-carpet/glee-fashion-red-carpet-poster.jpg",
+              caption: "Glee Fashion Red Carpet Hosting Highlights"
             }
           ]
         },
