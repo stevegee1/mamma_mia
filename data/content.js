@@ -229,6 +229,22 @@ const CONTENT = {
           ]
         },
         {
+          id: "football-transfer-uk",
+          name: "Football Transfer, UK",
+          date: "2026",
+          venue: "United Kingdom",
+          description: "Red carpet hosting and live coverage at the Football Transfer event in the UK.",
+          thumb: "/images/red-carpet/football-transfer-uk-poster.jpg",
+          media: [
+            {
+              type: "video",
+              src: "/images/red-carpet/football-transfer-uk.mp4",
+              poster: "/images/red-carpet/football-transfer-uk-poster.jpg",
+              caption: "Football Transfer, UK Red Carpet Highlights"
+            }
+          ]
+        },
+        {
           id: "met-gala-2026",
           name: "Met Gala 2026 Live Red Carpet",
           date: "2026-05-04",

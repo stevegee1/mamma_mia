@@ -266,8 +266,8 @@
 
         let previewHTML = '';
         if (isVideo) {
-          // If custom poster is specified and not the shared cover photo
-          if (media.poster && !media.poster.includes('1727a7ac-b00f-475b-b2a3-803658ea8ddc')) {
+          // If custom poster is specified, show it as the preview
+          if (media.poster) {
             previewHTML = `<img src="${resolveMediaUrl(media.poster)}" alt="${media.caption || targetEvent.name}" loading="eager">`;
           } else {
             // Render native video metadata frame (#t=0.5) so each video displays its own frame preview
