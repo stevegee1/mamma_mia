@@ -241,6 +241,12 @@ const CONTENT = {
               src: "/images/red-carpet/football-transfer-uk.mp4",
               poster: "/images/red-carpet/football-transfer-uk-poster.jpg",
               caption: "Football Transfer, UK Red Carpet Highlights"
+            },
+            {
+              type: "video",
+              src: "/images/red-carpet/football-transfer-uk-2.mp4",
+              poster: "/images/red-carpet/football-transfer-uk-2-poster.jpg",
+              caption: "Football Transfers, UK Feature"
             }
           ]
         },
